@@ -1,0 +1,16 @@
+<section class="filters">
+  @for(sortOption of sortOptions; track sortOption){
+  <button mat-raised-button (click)="toggleSort(sortOption.type)">
+    {{ sortOption.label }}
+    {{
+      (sortOption.type === "download"
+        ? downloadSortDirection
+        : sortOption.type === "upload"
+        ? uploadSortDirection
+        : priceSortDirection) === "asc"
+        ? "⬆️"
+        : "⬇️"
+    }}
+  </button>
+  }
+</section>

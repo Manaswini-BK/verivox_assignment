@@ -1,0 +1,23 @@
+:host {
+  width: 80%; /* Default width for desktop */
+  display: block;
+  margin: 0 auto;
+
+  .header {
+    background: black;
+    color: white;
+  }
+}
+
+/* Media queries for tablet and mobile */
+@media screen and (max-width: 1024px) {
+  :host {
+    width: 100%; /* Full width for tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :host {
+    width: 100%; /* Full width for mobile devices */
+  }
+}
